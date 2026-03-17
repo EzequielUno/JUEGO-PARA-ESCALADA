@@ -1,0 +1,34 @@
+.cuadrado {
+    width: 100px;
+    height: 100px;
+    font-size:large;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5%;
+    }
+.cuadrado:hover {
+    background-color: #f0f0f0;
+    }
+.bloqueado {
+    background-color: #ccc;
+    cursor: not-allowed;
+    border-radius: 5%;
+    }
+#prenda {
+    color:#ffffff;
+}
+
+/* Estilos para los cuadrados ganados por cada equipo */
+.equipo-a-color {
+    background-color: red;
+    color: yellow;
+}
+.equipo-b-color {
+    background-color: blue;
+    color: red;
+}

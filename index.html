@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Prendas</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Pantalla de Inicio -->
+    <div id="pantalla-inicio" class="container text-center mt-5">
+        <div class="jumbotron mt-5">
+            <h1 class="display-3">JUEGO DE PRENDAS</h1>
+            <p class="lead mt-3">¡Prepárate para el desafío de escalada!</p>
+            <button id="btn-comenzar" class="btn btn-primary btn-lg mt-4 px-5">COMENZAR JUEGO</button>
+        </div>
+    </div>
+
+    <div id="pantalla-juego" class="container" style="display: none;">
+        <h1 class="text-center mt-5">JUEGO DE PRENDAS</h1>
+        <h3 id="indicador-etapa" class="text-center text-info font-weight-bold mb-4">Etapa 1</h3>
+        <h2 class="text-center">Equipo A: <span id="puntos-a">0</span> puntos | tiempo: <span id="tiempo-a">00:00</span></h2>
+        <h2 class="text-center">Equipo B: <span id="puntos-b">0</span> puntos | tiempo: <span id="tiempo-b">00:00</h2>
+        <!-- <h2 class="text-center">Tiempo: <span id="tiempo">00:00</span></h2> -->
+        <div class="row justify-content-center">
+            <div class="col-5">
+                <div id="grilla" class="rounded d-flex flex-wrap justify-content-center"></div>
+            </div>
+        </div>
+        <div class="modal fade" id="modalPrenda" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modal-titulo-prenda">Prenda</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div id="contenedor-imagenes" class="d-flex justify-content-center align-items-center mb-3"></div>
+                        <p id="prenda" class="h3 font-weight-bold"></p>
+                        <p>Tiempo: <span id="tiempo">00:00</span></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" id="no-cumple" data-dismiss="modal">No cumple</button>
+                        <button type="button" class="btn btn-primary" id="cumple">Cumple</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modalResultado" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Resultado del juego</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" id="resultado">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="d-flex flex-column align-items-center justify-content-center mt-3">
+        <button type="button" class="btn btn-primary btn-lg mb-2 w-50" id="resetBot">REINICIAR</button>
+        <button type="button" class="btn btn-secondary btn-lg w-50" id="btnSonido">SILENCIAR</button>
+    </div>
+</div>
+
+    <!-- Sonidos: Asegúrate de tener los archivos .mp3 en la carpeta -->
+    <audio id="sonido-acierto" src="SOUNDS/acierto.mp3"></audio>
+    <audio id="sonido-error" src="SOUNDS/error.mp3"></audio>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Librería para efectos de confeti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="juego.js"></script>
+</body>
+</html>
