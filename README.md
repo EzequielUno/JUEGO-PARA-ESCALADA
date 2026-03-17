@@ -14,32 +14,32 @@ Estas tomas pueden ser:
 
 <table border="1">
   <tr>
-    <td><li>Aplique</li></td>
+    <td><ul><li>Aplique</li></ul></td>
     <td><img src="./IMAGES/aplique.jpg" width="200" height="200"></td>
   </tr>
 
   <tr>
-    <td><li>Bidedo</li></td>
+    <td><ul><li>Bidedo</li></ul></td>
     <td><img src="./IMAGES/bidedo.jpg" width="200" height="200"></td>
   </tr>
 
   <tr>
-    <td><li>Lateral</li></td>
+    <td><ul><li>Lateral</li></ul></td>
     <td><img src="./IMAGES/lateral.jpg" width="200" height="200"></td>
   </tr>
 
   <tr>
-    <td><li>Regleta</li></td>
+    <td><ul><li>Regleta</li></ul></td>
     <td><img src="./IMAGES/regleta.jpg" width="200" height="200"></td>
   </tr>
 
   <tr>
-    <td><li>Roma</li></td>
+    <td><ul><li>Roma</li></ul></td>
     <td><img src="./IMAGES/roma.jpg" width="200" height="200"></td>
   </tr>
 
   <tr>
-    <td><li>Comodín</li><spam>(El equipo elige la toma)</spam></td>
+    <td><ul><li>Comodín</li></ul><spam>(El equipo elige la toma)</spam></td>
     <td><img src="./IMAGES/comodin.jpg" width="300" height="200"></td>
   </tr>
 
