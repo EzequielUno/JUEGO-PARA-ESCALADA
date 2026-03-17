@@ -13,7 +13,7 @@ Al tocar un cuadrado, se va a mostrar el nombre de una toma que el equipo debe t
 Estas tomas pueden ser:
 
 Aplique	![aplique](./IMAGES/aplique.jpg)
-Bidedo	
+Bidedo	<img src="./IMAGES/bidedo.jpg" width="500" height="300">
 Lateral	
 Regleta	
 Roma	
