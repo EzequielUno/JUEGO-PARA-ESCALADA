@@ -12,10 +12,10 @@ Al tocar un cuadrado, se va a mostrar el nombre de una toma que el equipo debe t
 
 Estas tomas pueden ser:
 
-Aplique	![aplique](./IMAGES/aplique.jpg)
+Aplique	<img src="./IMAGES/aplique.jpg" width="200" height="200">
 Bidedo	<img src="./IMAGES/bidedo.jpg" width="200" height="200">
-Lateral	
-Regleta	
-Roma	
-Comodín(el equipo elige que toma quiere)	
+Lateral	<img src="./IMAGES/lateral.jpg" width="200" height="200">
+Regleta	<img src="./IMAGES/regleta.jpg" width="200" height="200">
+Roma	<img src="./IMAGES/roma.jpg" width="200" height="200">
+Comodín(el equipo elige que toma quiere)	<img src="./IMAGES/comodin.jpg" width="200" height="200">
 El juego consta de dos etapas. La primera, cada prenda es una sola toma, Aplique, Roma, etc. La segunda etapa, combina dos tomas, por lo que hay una mayor complejidad a la hora de realizar el desafío.-
