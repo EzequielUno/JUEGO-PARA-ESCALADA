@@ -32,3 +32,27 @@
     background-color: blue;
     color: red;
 }
+
+/* --- RESPONSIVE DESIGN --- */
+
+/* Para Móvil L (425px) y tablets pequeñas */
+@media (max-width: 425px) {
+    .cuadrado {
+        width: 90px;
+        height: 90px;
+        margin: 5px; /* Reducimos margen para asegurar que entren 3 */
+    }
+    h2 { font-size: 1.2rem; } /* Ajustar texto de puntuación */
+}
+
+/* Para Móvil S (320px) */
+@media (max-width: 320px) {
+    .cuadrado {
+        width: 70px;
+        height: 70px;
+        margin: 4px;
+        font-size: 0.9rem;
+    }
+    h2 { font-size: 1rem; }
+    .display-3 { font-size: 2.5rem; } /* Ajustar título principal */
+}
