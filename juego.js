@@ -92,7 +92,7 @@ function mostrarPrenda(event) {
     }
     
     // Actualizar el título del modal con el equipo actual
-    document.getElementById("modal-titulo-prenda").textContent = `Etapa ${etapa} - Equipo ${equipo}`;
+    document.getElementById("modal-titulo-prenda").textContent = `Etapa ${etapa} 🧗 - Equipo ${equipo} ✨`;
 
     document.getElementById("prenda").textContent = prendaTexto;
     $("#modalPrenda").modal("show");
@@ -110,7 +110,7 @@ function iniciarJuego() {
 function toggleSonido() {
     sonidoActivo = !sonidoActivo;
     const btn = document.getElementById("btnSonido");
-    btn.textContent = sonidoActivo ? "SILENCIAR" : "ACTIVAR SONIDO";
+    btn.textContent = sonidoActivo ? "SILENCIAR 🔊" : "ACTIVAR SONIDO 🔇";
     btn.classList.toggle("btn-secondary");
     btn.classList.toggle("btn-danger");
 }
@@ -125,7 +125,7 @@ function sumarPunto() {
     // Usamos la referencia directa al cuadrado que se clickeó
     if (cuadradoActivo) {
         cuadradoActivo.classList.add(`equipo-${equipo}`);
-        cuadradoActivo.textContent = equipo; // <-- Esto agrega la letra A o B
+        cuadradoActivo.textContent = equipo + (equipo === 'A' ? '🔴' : '🔵'); 
 
         // Aplicar estilos de color según el equipo
         if (equipo === 'A') {
@@ -184,17 +184,17 @@ function siguienteTurno() {
         
         let mensaje;
         if (puntosA > puntosB) {
-            mensaje = "¡El Equipo A gana por puntos!";
+            mensaje = "¡El Equipo A 🔴 gana por puntos! 🏆🥳";
         } else if (puntosB > puntosA) {
-            mensaje = "¡El Equipo B gana por puntos!";
+            mensaje = "¡El Equipo B 🔵 gana por puntos! 🏆🥳";
         } else {
             // Desempate por tiempo si los puntos son iguales
             if (TiempoA < TiempoB) {
-                mensaje = `Empate en puntos. ¡Gana Equipo A por velocidad! (${formatearTiempo(TiempoA)} vs ${formatearTiempo(TiempoB)})`;
+                mensaje = `Empate en puntos. ¡Gana Equipo A 🔴 por velocidad! ⚡ (${formatearTiempo(TiempoA)} vs ${formatearTiempo(TiempoB)})`;
             } else if (TiempoB < TiempoA) {
-                mensaje = `Empate en puntos. ¡Gana Equipo B por velocidad! (${formatearTiempo(TiempoB)} vs ${formatearTiempo(TiempoA)})`;
+                mensaje = `Empate en puntos. ¡Gana Equipo B 🔵 por velocidad! ⚡ (${formatearTiempo(TiempoB)} vs ${formatearTiempo(TiempoA)})`;
             } else {
-                mensaje = "¡Empate absoluto en puntos y tiempo!";
+                mensaje = "¡Empate absoluto en puntos y tiempo! 🤝";
             }
         }
 
@@ -218,11 +218,11 @@ function iniciarSegundaEtapa() {
     
     // Mensaje de transición (usamos el modal de resultado momentáneamente o un alert simple)
     setTimeout(() => {
-        alert("¡Fin de la Primera Etapa! \n\nAhora comienza la Etapa 2: PRENDAS COMBINADAS.");
+        alert("¡Fin de la Primera Etapa! 🏁 \n\nAhora comienza la Etapa 2: PRENDAS COMBINADAS 💥.");
         limpiarTablero();
         
         // Actualizar visualmente para indicar etapa 2
-        document.getElementById("pantalla-juego").querySelector("h1").textContent = "JUEGO DE PRENDAS - ETAPA 2";
+        document.getElementById("pantalla-juego").querySelector("h1").textContent = "JUEGO DE PRENDAS 🧗‍♂️ - ETAPA 2";
         document.getElementById("indicador-etapa").textContent = "Etapa 2";
     }, 500);
 }
@@ -246,7 +246,7 @@ function limpiarTablero() {
         tiempo = 0;
         equipo = "A"; // Resetear también a quién le toca
         etapa = 1;    // Volver a etapa 1
-        document.getElementById("pantalla-juego").querySelector("h1").textContent = "JUEGO DE PRENDAS";
+        document.getElementById("pantalla-juego").querySelector("h1").textContent = "JUEGO DE PRENDAS 🧗‍♂️";
         document.getElementById("indicador-etapa").textContent = "Etapa 1";
 
         // 2. Actualizar visualmente
@@ -255,6 +255,7 @@ function limpiarTablero() {
         document.getElementById("tiempo-a").innerText = "00:00";
         document.getElementById("tiempo-b").innerText = "00:00";
         document.getElementById("tiempo").innerText = "00:00";
+        document.getElementById("btnSonido").textContent = "SILENCIAR 🔊";
         
         // 3. Limpiar grilla
         const grilla = document.getElementById("grilla");

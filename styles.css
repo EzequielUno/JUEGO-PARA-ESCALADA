@@ -1,36 +1,72 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #f0f9ff; /* Azul cielo muy clarito */
+}
+
+.jumbotron {
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
 .cuadrado {
     width: 100px;
     height: 100px;
-    font-size:large;
+    font-size: 1.5rem;
     font-weight: bold;
-    border: 1px solid #ccc;
+    border: 4px solid #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 10px;
     cursor: pointer;
-    border-radius: 5%;
-    }
+    border-radius: 20px; /* Más redondeado */
+    background-color: #e2e8f0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
 .cuadrado:hover {
-    background-color: #f0f0f0;
-    }
+    background-color: #cbd5e1;
+    transform: scale(1.05); /* Efecto de rebote */
+}
+
 .bloqueado {
-    background-color: #ccc;
+    background-color: #94a3b8;
     cursor: not-allowed;
-    border-radius: 5%;
-    }
+    box-shadow: none;
+}
+
 #prenda {
-    color:#ffffff;
+    color: #333; /* Mejor contraste para lectura */
+    font-size: 2rem;
 }
 
 /* Estilos para los cuadrados ganados por cada equipo */
 .equipo-a-color {
-    background-color: red;
-    color: yellow;
+    background-color: #ff6b6b; /* Rojo coral */
+    color: #ffffff;
+    border-color: #ff5252;
 }
 .equipo-b-color {
-    background-color: blue;
-    color: red;
+    background-color: #4ecdc4; /* Turquesa */
+    color: #ffffff;
+    border-color: #45b7af;
+}
+
+/* Botones más grandes y redondos */
+.btn {
+    border-radius: 50px;
+    padding: 10px 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.modal-content {
+    border-radius: 25px;
+    border: none;
+    overflow: hidden;
 }
 
 /* --- RESPONSIVE DESIGN --- */
